@@ -1,3 +1,5 @@
+# Dati a e b, risolvere l'equazione ax + b = 0
+
 class EquaPrimoGrado():
     def __init__(self):
         a = int(input("Insira il valore di a: "))
