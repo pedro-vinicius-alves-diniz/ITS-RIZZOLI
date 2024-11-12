@@ -10,7 +10,7 @@ class CalcolaAreaPerimetro():
     def verifica_triangolo(self, lato1, lato2, lato3):
         if lato1 < lato2 + lato3 and lato2 < lato1 + lato3 and lato3 < lato1 + lato2:
             print("È un triangolo.")
-            self.tipo_di_triangolo(lato1, lato2, lato3)
+            self.area(lato1, lato2, lato3, self.tipo_di_triangolo(lato1,lato2, lato2))
             self.perimetro(lato1, lato2, lato3)
         else:
             print("Non è un trinagolo.")
@@ -21,15 +21,21 @@ class CalcolaAreaPerimetro():
         if l1 == l2 ==l3:
             print("Triangolo equilatero.")
             tipo = "equilatero"
-            self.area(l1, l2, l3, tipo)
+
+            return tipo
+        
         elif l1 == l2 or l1 == l3 or l2 == l3:
             print("Triangolo isoscele.")
             tipo = "isoscele"
-            self.area(l1, l2, l3, tipo)
+
+            return tipo
+        
         else:
             print("Triangolo scaleno.")
             tipo = "scaleno"
-            self.area(l1, l2, l3, tipo)
+
+            return tipo
+
 
     # FUNZIONE PER CALCOLARE L'AREA DEL TRIANGOLO
     def perimetro(self, lato1, lato2, lato3):
