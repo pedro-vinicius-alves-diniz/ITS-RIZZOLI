@@ -12,7 +12,7 @@ a, b, c = map(float, input('Insirire i valori di a, b e c: ').split())
 print(a, b, c)
 print("O maior número é o:", max(a, b, c))
 
-#TERZO MODO DI INPUT
+# TERZO MODO DI INPUT
 numeri = []
 
 for i in range(3):
@@ -21,3 +21,4 @@ for i in range(3):
     numeri.append(i)
 
 print("Il maggiore numero è", max(numeri))
+

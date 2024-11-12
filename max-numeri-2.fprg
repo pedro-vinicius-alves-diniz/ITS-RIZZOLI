@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="maggiore-numero"/>
+        <attribute name="authors" value="PedroViniciusAlvesDi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-12 04:13:36 "/>
+        <attribute name="created" value="UGVkcm9WaW5pY2l1c0FsdmVzRGk7SVRTQVItUFcwRDNYNzM7MjAyNC0xMS0xMjsiMDI6MTg6NDEgIjs0MTcy"/>
+        <attribute name="edited" value="UGVkcm9WaW5pY2l1c0FsdmVzRGk7SVRTQVItUFcwRDNYNzM7MjAyNC0xMS0xMjsiMDQ6MTM6MzYgIjsyOzQyODI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, max" type="Real" array="False" size=""/>
+            <declare name="index, n" type="Integer" array="False" size=""/>
+            <do expression="n &lt;2">
+                <output expression="&quot;Quanti numeri vorresti inserire?&quot;" newline="True"/>
+                <input variable="n"/>
+            </do>
+            <for variable="index" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Inserisce un numero: &quot;" newline="True"/>
+                <input variable="num"/>
+                <if expression="index == 0">
+                    <then>
+                        <assign variable="max" expression="num"/>
+                    </then>
+                    <else>
+                        <if expression="num &gt; max">
+                            <then>
+                                <assign variable="max" expression="num"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Il maggior numero &#232; &quot;&amp;max" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
