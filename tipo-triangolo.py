@@ -1,4 +1,5 @@
-      
+# Richiesti 3 lati in input dire in output di che tipo di triangolo si tratta, se isoscele, scaleno o equilatero      
+
 class TipoTriangolo():
     def __init__(self):
         l1, l2, l3 = map(int, input("Insira tre lati: ").split())
