@@ -1,0 +1,1 @@
+# Dati a, b e c in input calcolare le radici dell'equazione ax**2 + bx + c = 0

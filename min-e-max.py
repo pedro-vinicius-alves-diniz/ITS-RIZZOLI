@@ -1,4 +1,4 @@
-# 1Chiedere in input N numeri con N>= 5 e trovare si MIN che il MAX (se volete usare vettore per salvare numeri)
+# Chiedere in input N numeri con N>= 5 e trovare si MIN che il MAX (se volete usare vettore per salvare numeri)
 
 n = int(input("Quanti numeri vuoi inserire? "))
 

@@ -1,18 +1,23 @@
-#Dati tre numeri in input trovare il maggiore
+# Dati tre numeri in input trovare il maggiore
 
-# a = int(input("Inserire il valore di a: "))
-# b = int(input("Inserire il valore di b: "))
-# c = int(input("Inserire il valore di c: "))
+# PRIMO MODO DI INPUT
+a = float(input("Inserire il valore di a: "))
+b = float(input("Inserire il valore di b: "))
+c = float(input("Inserire il valore di c: "))
 
-# a, b, c = map(int, input('Insirire i valori di a, b e c: ').split())
+# SECONDO MODO DI INPUT
+a, b, c = map(float, input('Insirire i valori di a, b e c: ').split())
 
+
+print(a, b, c)
+print("O maior número é o:", max(a, b, c))
+
+#TERZO MODO DI INPUT
 numeri = []
-index = 0
 
-for numeri in range(3):
-    numeri.append(int(input("Insirire un numero ")))
-    
+for i in range(3):
+    i = float(input("Inserie un valore"))
 
+    numeri.append(i)
 
-print(numeri)
-print("O maior número é o:", max(numeri))
+print("Il maggiore numero è", max(numeri))

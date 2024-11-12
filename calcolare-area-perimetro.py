@@ -5,6 +5,7 @@ class CalcolaAreaPerimetro():
         l1, l2, l3 = map(int, input("Insira i valori dei lati ").split())
 
         self.verifica_triangolo(l1, l2, l3)
+        
 
     # FUNZIONE PER VERFICARE SE I DATI INSERETI SONO UN TRIANGOLO
     def verifica_triangolo(self, lato1, lato2, lato3):
