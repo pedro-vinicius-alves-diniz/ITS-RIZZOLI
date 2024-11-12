@@ -37,6 +37,7 @@ class CalcolaAreaPerimetro():
 
         print("Il perimeto è uguale a", perimetro)
 
+    #  FUNZIONE PER CALCOLARE L'AREA DEL TRIANGOLO
     def area(self, l1, l2, l3, tipo):
         if tipo == "equilatero":
             area = (math.sqrt(3)/4)*l1*l1
