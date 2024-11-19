@@ -15,6 +15,8 @@ indice = 0
 n = 0
 
 # MESCOLARE IL MAZZO
+mazzo_mescolato = random.shuffle(mazzo)
+
 for i in range(40):
     i = random.choice(mazzo)
 

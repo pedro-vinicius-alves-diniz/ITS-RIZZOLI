@@ -4,13 +4,18 @@ class TipoTriangolo():
     def __init__(self):
         l1, l2, l3 = map(int, input("Insira tre lati: ").split())
 
-        self.tipo_di_triangolo(l1, l2, l3)
+        self.verifica_triangolo(l1, l2, l3)
 
     def verifica_triangolo(self, lato1, lato2, lato3):
-        if lato1 < lato2 + lato3 and lato2 < lato1 + lato3 and lato3 < lato1 + lato2:
-            self.tipo_di_triangolo(lato1, lato2, lato3)
+        if lato1 > 0 or lato2 > 0 or lato3 > 0:
+            if lato1 < lato2 + lato3 and lato2 < lato1 + lato3 and lato3 < lato1 + lato2:
+                self.tipo_di_triangolo(lato1, lato2, lato3)
+            else:
+                print("Non è un trinagolo.")
+                exit()
         else:
-            print("Non è un trinagolo.")
+            print("Non è un triangolo")
+            exit()
 
     def tipo_di_triangolo(self, l1, l2, l3):
         if l1 == l2 ==l3:
