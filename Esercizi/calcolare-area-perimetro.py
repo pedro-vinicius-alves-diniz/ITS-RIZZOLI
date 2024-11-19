@@ -9,7 +9,7 @@ class CalcolaAreaPerimetro():
 
     # FUNZIONE PER VERFICARE SE I DATI INSERETI SONO UN TRIANGOLO
     def verifica_triangolo(self, lato1, lato2, lato3):
-        if lato1 < lato2 + lato3 and lato2 < lato1 + lato3 and lato3 < lato1 + lato2 and lato1 >0 and lato2 >0 and lato3>0:
+        if (lato1 > 0 or lato2 > 0 or lato3 > 0) and (lato1 < lato2 + lato3 and lato2 < lato1 + lato3 and lato3 < lato1 + lato2):
             print("È un triangolo.")
             perimetro = self.perimetro(lato1, lato2, lato3)
             area = self.area(lato1, lato2, lato3, perimetro/2)
