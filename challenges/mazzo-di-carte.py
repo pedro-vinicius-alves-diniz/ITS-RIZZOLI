@@ -8,10 +8,10 @@ cuori = mazzo[:10]
 quadri = mazzo[10:20]
 fiori = mazzo [20:30]
 picche = mazzo[30:]
-print(f"Cuori sono {cuori}")
-print(f"Quadri sono {quadri}")
-print(f"Fiori sono {fiori}")
-print(f"Picche sono {picche}")
+print(f"Cuori: {cuori}")
+print(f"Quadri: {quadri}")
+print(f"Fiori: {fiori}")
+print(f"Picche: {picche}")
 
 mazzo_mescolato = []
 mazzo_riordinato = []
