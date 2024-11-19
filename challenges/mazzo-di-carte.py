@@ -13,7 +13,7 @@ print(f"Quadri: {quadri}")
 print(f"Fiori: {fiori}")
 print(f"Picche: {picche}")
 
-mazzo_mescolato = []
+mazzo_mescolato = mazzo.copy()
 mazzo_riordinato = []
 
 indice = 0
@@ -27,18 +27,9 @@ while scelte1 < 1 and scelte1 >2:
     scelte1 = int(input("Scegli un numero:\n1. Mescolare\n2.Exit\n\n"))
 
 if scelte1 == 1:
-
-    for i in range(40):
-        i = random.choice(mazzo)
-
-        while i in mazzo_mescolato:
-            i = random.choice(mazzo)
-
-        mazzo_mescolato.append(i)
-
+    random.shuffle(mazzo_mescolato)
     print(f"\nMazzo mescolato con successo: {mazzo_mescolato}\n")
 else:
-
     exit()
 
 
@@ -49,10 +40,8 @@ while scelte2 < 1 or scelte2 > 2:
     scelte2 = int(input("Scegli un numero:\n1 -> Riordinare\n2 -> Exit"))
 
 if scelte2 == 1:
-
     for i in range(40):
         indice = 0
-        
         i = mazzo_mescolato[indice]
 
         while i != mazzo[n]:
