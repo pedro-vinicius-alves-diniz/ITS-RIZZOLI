@@ -1,20 +1,29 @@
 import random
 
 mazzo = []
-mazzo_mescolato = []
+mazzoMescolato = []
 
 for i in range(40):
-    i+=1 
+    i+=1
     mazzo.append(i)
 
 print(mazzo)
 
 for i in range(40):
-    i = random.randint(1, 40)
+    mazzoMescolato.append(0)
 
-    while i in mazzo_mescolato:
-        i = random.randint(1, 40)
+for i in range(40):
+    n = random.randint(1, 40)
+    y = 0
+    
+    while y < 40:
+        if mazzoMescolato[y] == n:
+            n = random.randint(1, 40)
+            y = 0
+        else:
+            y +=1
 
-    mazzo_mescolato.append(i)
 
-print(mazzo_mescolato)
+    mazzoMescolato[i] = n
+
+print(mazzoMescolato)
