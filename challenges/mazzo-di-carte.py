@@ -22,6 +22,8 @@ mazzo_riordinato = []
 indice = 0
 n = 0
 
+
+
 # MESCOLARE IL MAZZO
 scelte1 = int(input("\nScegli un numero:\n1 -> Mescolare\n2 -> Exit\n\n"))
 
