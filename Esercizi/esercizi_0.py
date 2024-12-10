@@ -1,7 +1,7 @@
 # Creare una lista A di soli numeri interi e poi dividerli in due liste diverse chiamate PARI e DISPARI
 
 import random as rd
-import faker
+
 """
 
 listaA = []
@@ -27,7 +27,7 @@ print(listaDispari)
 
 """
 
-
+#########################################################################################################
 
 # Creare due liste diverse a caso, Concatenare le due liste ordinandole in modo decrescente
 """
@@ -51,6 +51,8 @@ print(listaZ)
 
 """
 
+#########################################################################################################
+
 # Scambiare il primo e l'ultimo valore di una lista
 """
 lista = []
@@ -72,9 +74,72 @@ print("Lista modificata:", lista)
 
 """
 
+#########################################################################################################
+
 # Programma per leggere un elenco di parole e restituire la lunghezza del più lungo
+from faker import Faker
+
+"""
 lista = []
-fake = faker()
+lenn = []
+fake = Faker()
+indici = []
 
 for i in range(20):
-    parola = fake
+    parola = fake.word()
+    while parola in lista:
+        parola = fake.word()
+
+    lista.append(parola)
+
+for i in lista:
+    lenn.append(len(i))
+
+
+piulungo = max(lenn)
+
+if lenn.count(piulungo) > 1:
+        print("Ci sono più di una parola più lunghe")
+else:
+    print("C'è sono una parola più lunga")
+
+
+for i, x in enumerate(lista):
+    if len(x) == piulungo:
+        indici.append(i)
+
+print(indici)
+
+if len(indici) > 1:
+    print(f"Le parole più lunghe sono: ")
+    for i in indici:
+        print(lista[i])
+else:
+    print(f"La parola più lunga è '{lista[lenn.index(piulungo)]}'")
+"""
+
+#########################################################################################################
+
+# Sia data una lista stampare l'indice dell'elemento 'SPTSX' e interrompre il ciclo
+
+"""
+indici = ['SPX','SX5E','NKY','UKX','SPTSX','AS51','SMI']
+
+while True:
+    for i in indici:
+        if i == "SPTSX":
+            print(indici.index(i))
+            exit()
+"""
+
+#########################################################################################################
+
+# Sia data una lista stampare l'indice di tutti gli elementi saltando l'indice dell'elemento 'SX5E' nella condizione
+# e ritornare al for (continue)
+indici = ['SPX','SX5E','NKY','UKX','SPTSX','AS51','SMI']
+
+for i in indici:
+    if i != "SX5E":
+        print(indici.index(i))
+        
+    print("continue")   
