@@ -136,10 +136,32 @@ while True:
 
 # Sia data una lista stampare l'indice di tutti gli elementi saltando l'indice dell'elemento 'SX5E' nella condizione
 # e ritornare al for (continue)
+
+"""
 indici = ['SPX','SX5E','NKY','UKX','SPTSX','AS51','SMI']
 
 for i in indici:
     if i != "SX5E":
         print(indici.index(i))
         
-    print("continue")   
+    print("continue")
+"""
+
+#########################################################################################################
+
+'''ESERCIZIO: RANDOM
+Generare 10000 numeri interi random compresi tra 0 e 1000000, stampare il numero generato più grande,
+il numero generato più piccolo e la media dei numeri generati.'''
+
+lista = []
+
+for i in range(10000):
+    valore = int(rd.randint(0,1000000))
+    while valore in lista:
+        valore = int(rd.randint(0,1000000))
+
+    lista.append(valore)
+
+print(f"Il massimo è: {max(lista)}")
+print(f"Il minimo è: {min(lista)}")
+print(f"La media dei numeri generati è: {.round(sum(lista)/len(lista))}")
