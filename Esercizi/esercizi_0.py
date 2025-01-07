@@ -164,4 +164,4 @@ for i in range(10000):
 
 print(f"Il massimo è: {max(lista)}")
 print(f"Il minimo è: {min(lista)}")
-print(f"La media dei numeri generati è: {.round(sum(lista)/len(lista))}")
+print(f"La media dei numeri generati è: {round(sum(lista)/len(lista))}")

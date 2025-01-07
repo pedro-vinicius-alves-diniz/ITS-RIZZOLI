@@ -4,6 +4,13 @@ matrix = [[2,0,4,5],
           [1,2,3,4]
           ]
 
+matrixSperata = [
+    [0,0,0,0],
+    [0,0,8,10],
+    [0,0,0,0],
+    [0,0,3,4]
+]
+
 indexRow = []
 indexCol = []
 
@@ -27,17 +34,10 @@ for zeri in indexCol:
 
 print(f"Le righe che ci sono zero sono: {indexRow}")
 print(f"Le colone che ci sono zero sono: {indexCol}")
-print(matrix[0])
-print(matrix[1])
-print(matrix[2])
-print(matrix[3])
+print("Mio risulato: ")
+for i in matrix:
+    print(i)
 
-"""
-OUTPUT:
-matrix = [
-    [0,0,0,0],
-    [0,0,8,10],
-    [0,0,0,0].
-    [0,0,3,4]
-]
-"""
+print("\nI risultato sperato:")
+for i in matrixSperata:
+    print(i)
